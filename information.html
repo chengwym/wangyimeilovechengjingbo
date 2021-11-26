@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人信息</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background: rgb(156, 156, 248);
+        }
+        
+        .shell {
+            right: 350px;
+            position: relative;
+            perspective: 700px;
+            transform-style: preserve-3d;
+        }
+        
+        .card {
+            height: 260px;
+            width: 460px;
+            transform: translateX(10px) rotateY(25deg) rotateX(10deg);
+            background-color: rgba(250, 200, 30, .8);
+            display: flex;
+            align-items: center;
+        }
+        
+        h1 {
+            font-size: 70px;
+        }
+        
+        .card .word {
+            background-color: #000;
+            line-height: 1;
+            color: rgba(250, 200, 30, 1);
+            padding: 0 10px;
+            margin: 0 15px 0 30px;
+            display: inline-flex;
+        }
+        
+        .shell::before {
+            content: '';
+            height: 260px;
+            width: 460px;
+            position: absolute;
+            margin-top: -9px;
+            margin-left: -9px;
+            border: 9px solid #000;
+            transform: translateX(-60px) rotateY(-30deg) rotateX(15deg) scale(1.03);
+        }
+        
+        .shell:hover>div,
+        .shell:hover::before {
+            transform: none;
+        }
+        
+        .shell>div,
+        .shell::before {
+            transition: .3s;
+        }
+        
+        .box {
+            float: left;
+            height: 300px;
+            background-color: black;
+        }
+        
+        .return {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        
+        .return a {
+            display: block;
+            text-align: center;
+            line-height: 100px;
+            font-size: 30px;
+            text-decoration: none;
+            color: white;
+            background-color: rgba(0, 0, 0, .3);
+            height: 100px;
+            width: 200px;
+            border-bottom-left-radius: 50px;
+        }
+        
+        .div {
+            position: absolute;
+            top: 170px;
+            right: 0;
+            width: 800px;
+            height: 550px;
+            background-color: pink;
+        }
+        
+        .inf1 {
+            position: fixed;
+            top: 200px;
+            right: 0;
+            width: 800px;
+            height: 100px;
+            background-color: rgba(250, 200, 30, .8);
+            color: black;
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        .inf1 .inf11 {
+            position: fixed;
+            top: 200px;
+            right: 0;
+            width: 600px;
+            height: 100px;
+            line-height: 100px;
+            border-left: black 5px solid;
+            border-top: black 5px solid;
+        }
+        
+        .inf1 .inf12 {
+            position: fixed;
+            top: 200px;
+            right: 600;
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            border-top: black 5px solid;
+            border-left: black 5px solid;
+        }
+        
+        .inf2 {
+            position: fixed;
+            top: 300px;
+            right: 0;
+            width: 800px;
+            height: 100px;
+            background-color: rgba(250, 200, 30, .8);
+            color: black;
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        .inf2 .inf21 {
+            position: fixed;
+            top: 300px;
+            right: 0;
+            width: 600px;
+            line-height: 100px;
+            height: 100px;
+            border-top: solid 5px black;
+            border-left: solid 5px black;
+        }
+        
+        .inf2 .inf22 {
+            position: fixed;
+            top: 300px;
+            right: 600;
+            width: 200px;
+            line-height: 100px;
+            height: 100px;
+            border-top: solid 5px black;
+            border-left: solid 5px black;
+        }
+        
+        .inf3 {
+            position: fixed;
+            top: 400px;
+            right: 0;
+            width: 795px;
+            height: 400px;
+            background-color: rgba(250, 200, 30, .8);
+            color: black;
+            text-align: center;
+            border-top: solid 5px black;
+            border-left: solid 5px black;
+            font-size: 38px;
+            line-height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="shell">
+        <div class="card">
+            <h1><span class="word">BIO</span>王一妹</h1>
+        </div>
+    </div>
+    <div class="return">
+        <a href="index.html">主页</a>
+    </div>
+    <div class="inf1">
+        <div class="inf11">qq：1822908170</div>
+        <div class="inf12">女</div>
+    </div>
+    <div class="inf2">
+        <div class="inf21">邮箱：13578757932@163.com</div>
+        <div class="inf22">吉林长春</div>
+    </div>
+    <div class="inf3">
+        <div class="inf31">美 丽 善 良， 相信自己与众不同 </br>热 衷 尝 试， 喜欢发掘内在潜能 </br>积 极 向 上， 执着于自我的提升</br>性 格 开 朗， 善于与人交流沟通 </br>步 履 不 停， 锲而舍之朽木不折
+        </div>
+    </div>
+</body>
+
+</html>

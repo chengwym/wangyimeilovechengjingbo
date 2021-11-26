@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专业优势</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 200vh;
+            overflow-x: hidden;
+        }
+        
+        .background {
+            background-image: url("背景图.jpg");
+            background-size: cover;
+            background-position: 50% 50%;
+            height: 200vh;
+            font: 900 39rem '';
+            line-height: 130vh;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .background::before {
+            content: '';
+            background-size: cover;
+            background-image: inherit;
+            background-position: 50% 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -99;
+        }
+        
+        h1 {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            letter-spacing: 10px;
+            color: #fff;
+        }
+        
+        h2 {
+            position: absolute;
+            letter-spacing: 2px;
+            top: 120vh;
+            width: 60%;
+            color: #fff;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 30px;
+            background-color: rgba(0, 0, 0, .3);
+        }
+        
+        .return {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        
+        .return a {
+            display: block;
+            text-align: center;
+            line-height: 100px;
+            font-size: 30px;
+            text-decoration: none;
+            color: white;
+            background-color: rgba(0, 0, 0, .3);
+            height: 100px;
+            width: 200px;
+            border-bottom-left-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>王一妹<br />专业优势</h1>
+    <div class="background"><span>Able</span></div>
+    <h2>
+        1.讲好一个故事 柏拉图曾说“谁会讲故事谁就拥有世界。” 努力踏踏实实写我的文字、拍我的图片、做我的视频。去沟通，去体验生活，认真总结每一次学习与创作之中的成败得失。相比于听到的各种经验、规则，亲身获取的经历最可贵。</br>
+        </br>
+        </br>
+        2.保持客观 尽量保持自己的客观和中立。虽然很难，但相比于那些不过脑子甚至是由外界完全操纵的发言，言之有物的文字才能获得尊敬。</br>
+        </br>
+        </br>
+        3.与时代同行 当代的媒体人既要懂得传统媒体也要懂新媒体，文字功底是基本功，也要了解互联网。了解“人”本身，发现人真正的需求，才能投其所好，生产出好的作品。</br>
+        </br>
+    </h2>
+
+    <script>
+        const background = document.querySelector(".background")
+
+        document.addEventListener('scroll', () => {
+            const scrollY = window.scrollY
+
+            if (scrollY !== 0) {
+                background.style.backgroundPosition = `calc(50% + ${scrollY}px) calc(50% + ${scrollY}px)`
+            } else {
+                background.style.backgroundPosition = ''
+            }
+        })
+    </script>
+    <div class="return">
+        <a href="index.html">主页</a>
+    </div>
+</body>
+
+</html>
